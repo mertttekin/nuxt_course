@@ -2,7 +2,14 @@
 
 import {resolve} from "path";
 export default defineNuxtConfig({
-    alias:{
-        '@':resolve(__dirname,"/"),
-    },
+    // alias:{
+    //     '@':resolve(__dirname,"/"),
+    // },
+    css: ['~/assets/css/tailwind.css'],
+    postcss: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
 })
